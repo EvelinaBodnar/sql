@@ -1,7 +1,7 @@
 CREATE TABLE Chocolate(
     bar_name VARCHAR2(128) NOT NULL,
     company INT NOT NULL,
-    bean_origin INT NOT NULL,
+    bean_type INT,
     cocoa_perc float NOT NULL,
     rating float NOT NULL)
 ALTER TABLE Chocolate
