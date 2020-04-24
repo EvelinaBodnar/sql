@@ -57,7 +57,7 @@ FROM Chocolate,
     (SELECT COUNT(bar_name) AS count
 FROM Chocolate)t   
 GROUP BY  company,
-     t.count; 
+     t.count
 ''')
 
 
@@ -72,11 +72,11 @@ pie = go.Figure(data=[go.Pie(labels=y, values=x )])
 pie_choc_url=py.plot(pie, filename='percentage of chocolate company ',auto_open=False)
 
 cur.execute('''   SELECT Bean.bean_type,
-    COUNT(Chocolate.diamond_index) AS count
+    COUNT(Chocolate.bean_type) AS count
     FROM Chocolate 
     INNER JOIN Bean ON Chocolate.bean_type = Bean.bean_type
 GROUP BY Bean.bean_type
-ORDER BY count DESC;
+ORDER BY count DESC
 ''')
 
 rows = cur.fetchall()
@@ -109,28 +109,28 @@ box_1 = {
     'type': 'box',
     'boxType': 'plot',
     'fileId':bar_rating,
-    'title': 'coast of land in different regions'
+    'title': 'Company and quantity of chocolatess'
 }
 
 box_2 = {
     'type': 'box',
     'boxType': 'plot',
     'fileId':pie_choc,
-    'title': 'The sum of all the GDP of region realetive to the GDP of the Earth '
+    'title': 'percentage of chocolate company '
 }
 
 box_3 = {
     'type': 'box',
     'boxType': 'plot',
     'fileId':scatter_beans ,
-    'title': 'Level of migration above the regions'
+    'title': 'dependence on the type of beans on the percentage of chocolate'
 }
 
 my_dboard.insert(box_1)
 my_dboard.insert(box_2, 'below', 1)
 my_dboard.insert(box_3, 'left', 2)
 
-py.dashboard_ops.upload(my_dboard, 'Dashboard')
+py.dashboard_ops.upload(my_dboard, 'db_Evelina')
 
 conn.commit()
 cur.close()
