@@ -2,7 +2,7 @@ import cx_Oracle
 
 import chart_studio
 chart_studio.tools.set_credentials_file(username='Evelinabodnar', api_key='S6Cu2THhk1VIBPXEKZVf')
-conn = cx_Oracle.connect("SYS","2805052001","lockalhost/xe")
+conn = cx_Oracle.connect("SYS","B8KF4tdlXXi5cYNGTXUx","lockalhost/orcl")
 cur = conn.cursor()
 
 cur.execute('''
