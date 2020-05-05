@@ -1,37 +1,3 @@
-INSERT INTO Chocolate (bar_name, company, bean_type, cocoa_perc, rating) 
-VALUES ('Madagascar', 'Soma', 'Trinitario', 70, 3.75);
-
-INSERT INTO Chocolate (bar_name, company, bean_type, cocoa_perc, rating) 
-VALUES ('Peru ', 'Bonnat', 'Trinitario', 70, 2.0);
-
-INSERT INTO Chocolate (bar_name, company, bean_type, cocoa_perc, rating) 
-VALUES ('Ecuador ', 'Soma', '', 70, 4.8);
-
-INSERT INTO Chocolate (bar_name, company, bean_type, cocoa_perc, rating) 
-VALUES ('Dominican Republic ', 'Bonnat', 'Criollo', 75, 3.2);
-
-INSERT INTO Chocolate (bar_name, company, bean_type, cocoa_perc, rating) 
-VALUES ('Kpime ', 'Fresco','', 75, 2.4);
-
-INSERT INTO Chocolate (bar_name, company, bean_type, cocoa_perc, rating) 
-VALUES ('Atsane ', 'Pralus', 'Trinitario', 72, 1.2);
-
-INSERT INTO Chocolate (bar_name, company, bean_type, cocoa_perc, rating) 
-VALUES ('Quilla ', 'Soma', 'Criollo', 72, 4.1);
-
-INSERT INTO Chocolate (bar_name, company, bean_type, cocoa_perc, rating) 
-VALUES ('Carenero ', 'Pralus', '', 72, 2.2);
-
-INSERT INTO Chocolate (bar_name, company, bean_type, cocoa_perc, rating) 
-VALUES ('Akata ', 'A.Morin', 'Forastero', 65, 4.3);
-
-INSERT INTO Chocolate (bar_name, company, bean_type, cocoa_perc, rating) 
-VALUES ('Agua Grande ', 'Soma', 'Trinitario', 45, 3.3);
-
-
-
-
-
 INSERT INTO Company (company) 
 VALUES ('Soma');
 
@@ -59,7 +25,35 @@ VALUES ('Criollo');
 INSERT INTO Bean(bean_type) 
 VALUES ('Forastero');
 
+INSERT INTO Bean(bean_type) 
+VALUES ('Bonnat');
 
+INSERT INTO Chocolate (bar_id, bar_name, company, bean_type, cocoa_perc) 
+VALUES ('1','Madagascar', 'Soma', 'Trinitario', 70);
 
+INSERT INTO Chocolate (bar_id, bar_name, company, bean_type, cocoa_perc) 
+VALUES ('2', 'Peru ', 'Bonnat', 'Trinitario', 70);
 
+INSERT INTO Chocolate (bar_id, bar_name, company, bean_type, cocoa_perc) 
+VALUES ('3','Ecuador ', 'Soma', 'Bonnat', 70);
 
+INSERT INTO Chocolate (bar_id, bar_name, company, bean_type, cocoa_perc) 
+VALUES ('4','Dominican Republic ', 'Bonnat', 'Criollo', 75);
+
+INSERT INTO Chocolate (bar_id, bar_name, company, bean_type, cocoa_perc) 
+VALUES ('5','Kpime ', 'Fresco','Trinitario', 75);
+
+INSERT INTO Chocolate (bar_id, bar_name, company, bean_type, cocoa_perc) 
+VALUES ('6','Atsane ', 'Pralus', 'Trinitario', 72);
+
+INSERT INTO Chocolate (bar_id, bar_name, company, bean_type, cocoa_perc) 
+VALUES ('7','Quilla ', 'Soma', 'Criollo', 72);
+
+INSERT INTO Chocolate (bar_id, bar_name, company, bean_type, cocoa_perc) 
+VALUES ('8','Carenero ', 'Pralus', 'Trinitario', 72);
+
+INSERT INTO Chocolate (bar_id, bar_name, company, bean_type, cocoa_perc) 
+VALUES ('9','Akata ', 'A.Morin', 'Forastero', 65);
+
+INSERT INTO Chocolate (bar_id, bar_name, company, bean_type, cocoa_perc) 
+VALUES ('10','Agua Grande ', 'Soma', 'Trinitario', 45);
