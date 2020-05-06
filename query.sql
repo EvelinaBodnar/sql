@@ -1,10 +1,7 @@
-SELECT ROUND(AVG(rating),3) AS rating
-, TRIM(company) AS company
-FROM Chocolate
-INNER JOIN Company
-ON Chocolate.company= Ñompany.company 
-GROUP BY Company
-ORDER BY  rating DESC;
+SELECT company, COUNT(bar_id) AS count
+    FROM Chocolate
+GROUP BY company
+ORDER BY count DESC;
 
 --Çàïèò 2. Âèâåñòè êîë³ð òà % ä³àìàíò³â ç òàêèì êîëüîðîì.
 
@@ -18,8 +15,8 @@ GROUP BY  company,
 --Çàïèò 3. Äèíàì³êà çàëåæíîñò³ ïðîçîðîñò³ ä³àìàíòó â³ä ê³ëüêîñò³ ä³àìàíò³â, ÿê³ ìàþòü òàêó ïðîçîð³ñòü.
 
 SELECT Bean.bean_type,
-    COUNT(Chocolate.diamond_index) AS count
+    COUNT(Chocolate.bar_id) AS count
     FROM Chocolate 
     INNER JOIN Bean ON Chocolate.bean_type = Bean.bean_type
 GROUP BY Bean.bean_type
-ORDER BY count DESC;
+ORDER BY count DESC
