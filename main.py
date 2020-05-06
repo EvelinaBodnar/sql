@@ -4,13 +4,10 @@ conn = cx_Oracle.connect("SYS","B8KF4tdlXXi5cYNGTXUx","lockalhost/orcl")
 cur = conn.cursor()
 
 cur.execute('''
-SELECT ROUND(AVG(rating),3) AS rating
-, TRIM(company) AS company
-FROM Chocolate
-INNER JOIN Company
-ON Chocolate.company= Company.company 
-GROUP BY Company
-ORDER BY  rating DESC;
+SELECT company, COUNT(bar_id) AS count
+    FROM Chocolate
+GROUP BY company
+ORDER BY count DESC;
 ''')
 
 rows = cur.fetchall()
@@ -29,7 +26,7 @@ rows = cur.fetchall()
 print(rows)
 
 cur.execute('''   SELECT Bean.bean_type,
-    COUNT(Chocolate.diamond_index) AS count
+    COUNT(Chocolate.bar_id) AS count
     FROM Chocolate 
     INNER JOIN Bean ON Chocolate.bean_type = Bean.bean_type
 GROUP BY Bean.bean_type
