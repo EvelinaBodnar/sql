@@ -1,12 +1,12 @@
 SELECT ROUND(AVG(rating),3) AS rating
 , TRIM(company) AS company
 FROM Chocolate
-INNER JOIN Сompany
-ON Chocolate.company= Сompany.company 
-GROUP BY Сompany
+INNER JOIN Company
+ON Chocolate.company= Г‘ompany.company 
+GROUP BY Company
 ORDER BY  rating DESC;
 
---Запит 2. Вивести колір та % діамантів з таким кольором.
+--Г‡Г ГЇГЁГІ 2. Г‚ГЁГўГҐГ±ГІГЁ ГЄГ®Г«ВіГ° ГІГ  % Г¤ВіГ Г¬Г Г­ГІВіГў Г§ ГІГ ГЄГЁГ¬ ГЄГ®Г«ГјГ®Г°Г®Г¬.
 
 SELECT company, ROUND(COUNT(bar_name)*100/t.count, 2) AS persent
 FROM Chocolate,
@@ -15,7 +15,7 @@ FROM Chocolate)t
 GROUP BY  company,
      t.count; 
        
---Запит 3. Динаміка залежності прозорості діаманту від кількості діамантів, які мають таку прозорість.
+--Г‡Г ГЇГЁГІ 3. Г„ГЁГ­Г Г¬ВіГЄГ  Г§Г Г«ГҐГ¦Г­Г®Г±ГІВі ГЇГ°Г®Г§Г®Г°Г®Г±ГІВі Г¤ВіГ Г¬Г Г­ГІГі ГўВіГ¤ ГЄВіГ«ГјГЄГ®Г±ГІВі Г¤ВіГ Г¬Г Г­ГІВіГў, ГїГЄВі Г¬Г ГѕГІГј ГІГ ГЄГі ГЇГ°Г®Г§Г®Г°ВіГ±ГІГј.
 
 SELECT Bean.bean_type,
     COUNT(Chocolate.diamond_index) AS count
