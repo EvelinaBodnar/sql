@@ -28,6 +28,10 @@ VALUES ('Forastero');
 INSERT INTO Bean(bean_type) 
 VALUES ('Bonnat');
 
+INSERT INTO Bean(bean_type) 
+VALUES ('OER');
+
+
 INSERT INTO Chocolate (bar_id, bar_name, company, bean_type, cocoa_perc) 
 VALUES ('1','Madagascar', 'Soma', 'Trinitario', 70);
 
