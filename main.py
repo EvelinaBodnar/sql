@@ -7,7 +7,7 @@ cur.execute('''
 SELECT company, COUNT(bar_id) AS count
     FROM Chocolate
 GROUP BY company
-ORDER BY count DESC;
+ORDER BY count DESC
 ''')
 
 rows = cur.fetchall()
@@ -19,7 +19,7 @@ FROM Chocolate,
     (SELECT COUNT(bar_name) AS count
 FROM Chocolate)t   
 GROUP BY  company,
-     t.count; 
+     t.count
 ''')
 
 rows = cur.fetchall()
@@ -30,7 +30,7 @@ cur.execute('''   SELECT Bean.bean_type,
     FROM Chocolate 
     INNER JOIN Bean ON Chocolate.bean_type = Bean.bean_type
 GROUP BY Bean.bean_type
-ORDER BY count DESC;
+ORDER BY count DESC
 ''')
 
 rows = cur.fetchall()
